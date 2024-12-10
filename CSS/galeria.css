@@ -1,0 +1,252 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+#kontener {
+    max-width: 100%; 
+    margin:  auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #318234;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #6cff69;
+    color: #fff;
+}
+
+nav li ul {
+    display: none;
+    overflow:hidden;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav li:hover ul {
+    display: block;
+    padding:0%;
+  
+}
+
+nav li ul li {
+    display: block;
+    white-space: nowrap;
+   
+}
+
+nav li ul li a {
+    padding: 10px 10px;
+    color: #333;
+    display: block;
+    
+}
+
+nav li ul li a:hover {
+    background-color: #6cff69;
+    color: #fff;
+   
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+    background: linear-gradient(135deg, #e4f4bf 0%, #b6f0ca 100%); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.thumbnail {
+    margin: 10px ;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    
+    
+    
+}
+.thumbnail:hover{
+    transform: scale(1.05);
+}
+.thumbnail img {
+    width: 300px; 
+    height: 100%; 
+    object-fit: cover; 
+    cursor: pointer;
+    
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    color: #666;
+    
+}
+/* Media Queries */
+
+/* 1. Maksymalna szerokość 720px */
+@media screen and (max-width: 720px) {
+    nav a {
+        width: 48%;
+        padding: 10px 0;
+        font-size: 120%;
+    }
+    
+    #kontener {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 220%;
+    }
+
+    #tresc,
+    #pasek {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .gallery {
+        padding: 10px; 
+    }
+    
+    .thumbnail {
+        margin: 10px; 
+        width: calc(33.33% - 10px);
+    }
+
+    .thumbnail img {
+        width: 100%; 
+    }
+}
+
+/* 2. Pomiędzy 481px a 720px */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    header {
+        width: 100%;
+        padding: 1%;
+        text-align: center;
+    }
+    nav li a {
+        font-size: 80%; 
+    }
+     
+    #tresc h2 {
+        color: #ff69b4;
+        font-size: 10px;
+    }
+
+    #tresc {
+        width: 90%;
+        margin-top: 10px;
+        font-size: 50%;
+    }
+    .thumbnail {
+        margin: 8px; 
+        width: calc(33.33% - 16px);
+    }
+}
+
+/* 3. Maksymalna 481px */
+@media screen and (max-width: 481px) {
+    header {
+        width: 100%;
+        padding: 1%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 180%;
+    }
+
+    nav li a {
+        width: 90%;
+        padding: 8px 0;
+        font-size: 70%; 
+        text-align: center;
+        border: none;
+    }
+
+    nav li {
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    nav li ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    nav li:hover ul {
+        display: block;
+    }
+    nav li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #tresc {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 7px;
+    }
+
+    #tresc h2 {
+        color: #ff69b4;
+        font-size: 8px;
+    }
+    .thumbnail {
+        margin: 5px; 
+        width: calc(33.33% - 10px);
+    }
+}

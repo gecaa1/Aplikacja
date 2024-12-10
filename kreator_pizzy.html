@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> kreator pizzy </title>
+        <link rel="stylesheet" href="CSS/kreator_pizzy.css" type="text/css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+
+    </head>
+    <body>
+        <div id="menu">
+            <ul id="nav">
+                <li><a href="index.html">Podstawy</a></li> 
+                <li><a href="tabela.html">Tabele</a></li> 
+                <li><a href="formularz.html">Formularze</a> <ul>
+                <li><a href= "pola.html">Pola formularza</a></li>
+                <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li> </ul>
+                </li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="kreator_pizzy.html">Pizza</a></li>
+            </ul>
+            </div>
+        <div id="formularz">
+                    <div id="baner"><h1>Kreator pizzy</h1></div>
+                    <form action="mailto:martynaxgea@gmail.com" method="post">
+                        <fieldset>
+                            <legend id="1">Rozmiar:</legend>
+                            <input type="radio" name="metoda" value="Ff" /> Mała 
+                            <input type="radio" name="metoda" value="Ch" /> Średnia 
+                            <input type="radio" name="metoda" value="II" /> Duza
+                        </fieldset>
+               
+                    
+                   
+
+                    <Fieldset>
+                    <legend id="1">Dodatki:</legend>
+                    <input type="checkbox" name="d" value="szynka" /> Szynka <br/>
+                    <input type="checkbox" name="d" value="boczek" /> Boczek <br/>
+                    <input type="checkbox" name="d" value="salami" /> Salami <br />
+                    <input type="checkbox" name="d" value="papryka" /> Papryka <br/>
+                    <input type="checkbox" name="d" value="pomidor" /> Pomidor <br/>
+                    <input type="checkbox" name="d" value="Ser" /> Ser <br />
+                    </Fieldset>
+                    
+
+                    <Fieldset>
+                        <legend id="1">Sosy:</legend>
+                        <select size="1" name="sos">
+                            <option value="sos">pomidorowy</option>
+                            <option value="sos">pikantny</option>
+                            <option value="sos">ketchup łagodny</option>
+                            <option value="sos">ketchup pikantny</option>
+                            <option value="sos">Salsa</option> 
+                            <option value="sos">czosnkowy</option> 
+                        </select> <br/>
+                    </Fieldset>
+                    <fieldset>
+                        <legend id="1">Inne:</legend>
+                        <textarea name="uw" rows="5" cols="70"></textarea>
+
+                    </fieldset>
+                    
+                    <input type="submit" value="Wyślij zamówienie" />
+                    <input type="reset" value="Wyczyść dane" />
+
+                    </form>
+                    </div>
+            <div id="stopka">&copy;MG</div>
+
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szybki kurs HTML</title>
+    <link rel="stylesheet" href="CSS/kalkulator.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Szybki kurs HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Podstawy</a></li> 
+            <li><a href="tabela.html">Tabele</a></li> 
+            <li>
+                <a href="formularz.html">Formularze</a>
+                <ul>
+                    <li><a href="pola.html">Pola formularza</a></li>
+                    <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
+                </ul>
+            </li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="kreator_pizzy.html">Pizza</a></li>
+        </ul>
+    </nav>
+
+    <section id="baner">
+        <img src="baner.jpg" alt="Zdjęcie" />
+    </section>
+  
+    <fieldset>
+      <legend>Kalkulatorek</legend>
+      <table>
+        <tr>
+          <td>
+            <h3>Wpisz liczby: </h3>
+             X: <br>
+            <input type="text" id="pierwsza"><br>
+             Y: <br>
+            <input type="text" id="druga">
+          </td>
+          <td>
+            <h3>Wskaż działanie: </h3>
+            <input type="radio" name="operacja" value="dodawanie"> <label>+</label>
+            <br>
+            <input type="radio" name="operacja" value="odejmowanie"> <label>-</label>
+            <br>
+            <input type="radio" name="operacja" value="mnożenie"> <label>*</label>
+            <br>
+            <input type="radio" name="operacja" value="dzielenie"> <label>/</label>
+          </td>
+        </tr>
+        <tr>
+          <td> <button onclick="oblicz()">Oblicz</button> </td>
+          <td> Wynik:
+            <input type="text" id="wynik" disabled>
+          </td>
+        </tr>
+      </table>
+       </fieldset>
+       <footer> &copy;MG </footer>
+
+    <script>
+        function oblicz() {
+            var pierwsza = parseFloat(document.getElementById('pierwsza').value);
+            var druga = parseFloat(document.getElementById('druga').value);
+            var operacja = document.querySelector('input[name="operacja"]:checked');
+        
+            if (isNaN(pierwsza) || isNaN(druga)) {
+                alert("Proszę wprowadzić poprawne liczby.");
+                return;
+            }
+        
+            var wynik;
+        
+            if (operacja) {
+                switch (operacja.value) {
+                    case "dodawanie":
+                        wynik = pierwsza + druga;
+                        break;
+                    case "odejmowanie":
+                        wynik = pierwsza - druga;
+                        break;
+                    case "mnożenie":
+                        wynik = pierwsza * druga;
+                        break;
+                    case "dzielenie":
+                        if (druga !== 0) {
+                            wynik = pierwsza / druga;
+                        } else {
+                            alert("Nie można dzielić przez zero.");
+                        }
+                        break;
+                    default:
+                        alert("Nieprawidłowe działanie");
+                }
+            } else {
+                alert("Nie wybrano działania");
+            }
+        
+            document.getElementById('wynik').value = wynik;
+        }
+    </script>
+</body>
+</html>

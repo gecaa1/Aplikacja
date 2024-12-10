@@ -1,0 +1,42 @@
+
+
+/*styl karuzeli*/
+.carousel {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    
+  }
+  
+  /* Styl dla obrazów w karuzeli */
+  .carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Styl dla nawigacji karuzeli */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Styl dla wskaźników karuzeli */
+  .carousel-indicators li {
+    background-color: #f8f8f8;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #f8f8f8;
+  }
+  /*kontener z nav*/
+  .carousel-container {
+    position: relative;
+  }

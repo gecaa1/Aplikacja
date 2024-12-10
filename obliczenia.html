@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szybki kurs HTML</title>
+    <link rel="stylesheet" href="CSS/pozyczka.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/obliczenia.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Szybki kurs HTML</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Podstawy</a></li> 
+            <li><a href="tabela.html">Tabele</a></li> 
+            <li>
+                <a href="formularz.html">Formularze</a>
+                <ul>
+                    <li><a href="pola.html">Pola formularza</a></li>
+                    <li><a href="obliczenia.html">Obliczenia w formularzu</a></li>
+                </ul>
+            </li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="kreator_pizzy.html">Pizza</a></li>
+        </ul>
+    </nav>
+
+    <section id="baner">
+        <img src="baner.jpg" alt="Zdjęcie" />
+    </section>
+
+    <article>
+        <h3>Pożyczka</h3>
+        <table>
+            <tr>
+                <th>Kwota: </th>
+                <th><input type="text" id="kwota_pozyczki" required></th>
+            </tr>
+            <tr>
+                <th>Ile rat: </th>
+                <th><input type="text" id="liczba_rat" required></th>
+            </tr>
+            <tr>
+                <th>Procent: </th>
+                <th><input type="text" id="oprocentowanie_roczne" required></th>
+            </tr>
+            <tr>
+                <th>Rata miesięczna: </th>
+                <th><input type="text" id="oprocentowanie_miesieczne" class="wynik" disabled value=""></th>
+            </tr>
+            <tr>
+                <th>Kwota z odsetkami: </th>
+                <th><input type="text" id="odsetki" class="wynik" disabled value=""></th>
+            </tr>
+        </table>
+        <button class="przycisk_do_wyslania">Oblicz ratę stałą</button>
+    </article>
+     
+    <footer> &copy;MG </footer>
+</body>
+</html>

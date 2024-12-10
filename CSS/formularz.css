@@ -1,0 +1,290 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+#kontener {
+    max-width: 100%;
+    margin:  auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ff69b4;
+    margin: 0;
+}
+
+
+nav {
+    text-align: center;
+}
+
+nav {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+nav li ul {
+    display: none;
+    overflow:hidden;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+nav li:hover ul {
+    display: block;
+    padding:0%;
+}
+
+nav li ul li {
+    display: block;
+    white-space: nowrap;
+}
+
+nav li ul li a {
+    padding: 10px 10px;
+    color: #333;
+    display: block;
+}
+
+nav li ul li a:hover {
+    background-color: #ff69b4;
+    color: #fff;
+}
+
+#tresc {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#tresc h2 {
+    font-size: 24px;
+    color: #ff69b4;
+}
+
+#tresc h3 {
+    font-size: 20px;
+    color: #666;
+}
+
+#tresc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tresc ul li {
+    margin-bottom: 10px;
+}
+
+#tresc a {
+    color: #ff69b4;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #b32163;
+    transform: translateY(-2px);
+}
+
+input[type="reset"] {
+    margin-left: 10px;
+    background-color: #ccc;
+}
+
+input[type="reset"]:hover {
+    background-color: #999;
+}
+
+/* Media Queries */
+
+/* 1. Maksymalna szerokość 720px */
+@media screen and (max-width: 720px) {
+    nav a {
+        width:100%;
+        padding: 10px 0;
+        font-size: 120%;
+    }
+    
+    .slajd {
+        width: 45%;
+    }
+
+    #kontener {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #tresc,
+    #pasek {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Stylizacja formularza */
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+/* 2. Pomiędzy 481px a 720px */
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    header {
+        width: 100%;
+        padding: 1%;
+        text-align: center;
+    }
+    nav li a {
+        font-size: 80%; 
+    }
+
+    #tresc h2 {
+        color: #ff69b4;
+        font-size: 10px;
+    }
+
+    #tresc {
+        width: 90%;
+        margin-top: 10px;
+        font-size: 50%;
+    }
+
+    /* Stylizacja formularza */
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+/* 3. Maksymalna 481px */
+@media screen and (max-width: 481px) {
+    nav li a {
+        width: 90%;
+        padding: 8px 0;
+        font-size: 70%; 
+        text-align: center;
+        border: none;
+    }
+
+    nav li {
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    nav li ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+       
+    }
+
+    nav li:hover ul {
+        display: block;
+    }
+    nav li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .slajd {
+        width: 30%;
+    }
+
+    header {
+        width: 100%;
+        padding: 1%;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 180%;
+    }
+        #tresc {
+            width: 90%;
+            margin-top: 20px;
+            font-size: 7px;
+        }
+    
+        #tresc h2 {
+            color: #ff69b4;
+            font-size: 8px;
+        }
+
+    /* Stylizacja formularza */
+    input[type="text"],
+    input[type="email"] {
+        
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+
+/**/
